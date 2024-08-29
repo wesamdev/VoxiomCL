@@ -47,8 +47,8 @@ UtilManager.instance.clientUtils.events.on("game-load", () => {
 	settingsWindow.getSettings = (...args) => origGetSettings.call(settingsWindow, ...args).replace(/^<\/div>/, "") + settingsWindow.getCSettings();
 
 	let clientTabIndex = {
-		basic: settingsWindow.tabs.basic.push({ name: "idkr", categories: [] }),
-		advanced: settingsWindow.tabs.advanced.push({ name: "idkr", categories: [] })
+		basic: settingsWindow.tabs.basic.push({ name: "voxomiocl", categories: [] }),
+		advanced: settingsWindow.tabs.advanced.push({ name: "voxomiocl", categories: [] })
 	};
 	settingsWindow.getCSettings = () => {
 		if (clientTabIndex[settingsWindow.settingType] !== settingsWindow.tabIndex + 1 && !settingsWindow.settingSearch) return "";

@@ -184,6 +184,6 @@ window.addEventListener("unload", () => {
 		state: "Idle",
 		startTimestamp: Math.floor(Date.now() / 1000),
 		largeImageKey: "idkr-logo",
-		largeImageText: "idkr client"
+		largeImageText: "voxomiocl client"
 	});
 });

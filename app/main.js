@@ -30,7 +30,7 @@ cliSwitches(app, config);
 if (process.platform === "win32") {
 	app.setUserTasks([{
 		program: process.execPath,
-		arguments: "--new-window=https://krunker.io/",
+		arguments: "--new-window=https://voxiom.io/",
 		title: "New game window",
 		description: "Opens a new game window",
 		iconPath: process.execPath,
@@ -48,7 +48,7 @@ if (process.platform === "win32") {
 let init = function() {
 	// Workaround for Electron 8.x
 	protocol.registerSchemesAsPrivileged([{
-		scheme: "idkr-swap",
+		scheme: "voxiomcl-swap",
 		privileges: {
 			secure: true,
 			corsEnabled: true
@@ -62,7 +62,7 @@ let init = function() {
 
 	app.once("ready", async() => {
 		await PathUtils.ensureDirs(BrowserLoader.getSwapDir(), userscriptsDir);
-		protocol.registerFileProtocol("idkr-swap", (request, callback) => callback(decodeURI(request.url.replace(/^idkr-swap:/, ""))));
+		protocol.registerFileProtocol("voxiomcl-swap", (request, callback) => callback(decodeURI(request.url.replace(/^voxiomcl-swap:/, ""))));
 		app.on("second-instance", (_, _argv) => {
 			let instanceArgv = yargs.parse(_argv);
 			console.log("Second instance: " + _argv);

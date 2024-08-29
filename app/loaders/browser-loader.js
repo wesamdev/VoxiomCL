@@ -126,7 +126,7 @@ class BrowserLoader {
 
 		contents.on("dom-ready", () => (
 			(UrlUtils.locationType(contents.getURL()) === "game")
-			&& (shortcuts.register(win, "F6", () => win.loadURL("https://krunker.io/"))))
+			&& (shortcuts.register(win, "F6", () => win.loadURL("https://voxiom.io/"))))
 		);
 
 		contents.on("new-window", (event, url, frameName, disposition, options) => {
@@ -157,7 +157,7 @@ class BrowserLoader {
 		shortcuts.register(win, "Shift+F5", () => contents.reloadIgnoringCache());
 		shortcuts.register(win, "F11", () => win.setFullScreen(!win.isFullScreen()));
 		shortcuts.register(win, "CommandOrControl+L", () => clipboard.writeText(contents.getURL()));
-		shortcuts.register(win, "CommandOrControl+N", () => this.initWindow("https://krunker.io/", config));
+		shortcuts.register(win, "CommandOrControl+N", () => this.initWindow("https://voxiom.io/", config));
 		shortcuts.register(win, "CommandOrControl+Shift+N", () => this.initWindow(contents.getURL(), config));
 		shortcuts.register(win, "CommandOrControl+Alt+R", () => {
 			app.relaunch();
@@ -272,7 +272,7 @@ class BrowserLoader {
 		}
 
 		function launchGame() {
-			BrowserLoader.initWindow("https://krunker.io/", config);
+			BrowserLoader.initWindow("https://voxiom.io/", config);
 			setTimeout(() => win.destroy(), 2000);
 		}
 
