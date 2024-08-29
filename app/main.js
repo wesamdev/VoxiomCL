@@ -35,14 +35,16 @@ if (process.platform === "win32") {
 		description: "Opens a new game window",
 		iconPath: process.execPath,
 		iconIndex: 0
-	}, {
-		program: process.execPath,
-		arguments: "--new-window=https://krunker.io/social.html",
-		title: "New social window",
-		description: "Opens a new social window",
-		iconPath: process.execPath,
-		iconIndex: 0
-	}]);
+	},
+	//  {
+	// 	program: process.execPath,
+	// 	arguments: "--new-window=https://krunker.io/social.html",
+	// 	title: "New social window",
+	// 	description: "Opens a new social window",
+	// 	iconPath: process.execPath,
+	// 	iconIndex: 0
+	// }
+]);
 }
 
 let init = function() {
